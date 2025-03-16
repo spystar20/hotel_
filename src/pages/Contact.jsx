@@ -11,11 +11,10 @@ import { HiLocationMarker } from 'react-icons/hi';
 const Contact = () => {
   return (
     <div>
-        <Parallax className='w-[100%] h-[29vh] md:h-[46vh] lg:h-[100vh]' bgImageSizes='cover' bgImage='https://images.pexels.com/photos/1395964/pexels-photo-1395964.jpeg' strength={300}>
+        <Parallax className='w-[100%] h-[29vh] md:h-[46vh] lg:h-[100vh]' bgImageSizes='cover' bgImage='https://images.pexels.com/photos/8667538/pexels-photo-8667538.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2' strength={300}>
         <div className='text-center flex justify-center items-center flex-col text-white h-[29vh] md:h-[46vh] lg:h-[100vh] lg:py-20'>
-<h2 className='md:text-7xl text-4xl font-semibold font-imperial'>
+<h2 className='md:text-5xl text-4xl font-semibold font-antonio'>
 Contact Us</h2>
-<p className='font-outfit  text-xs md:px-32 md:text-lg text-semibold'>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Debitis nihil sed, corrupti laudantium nesciunt minus nobis vero voluptatibus. </p>
 </div>
         </Parallax>
         {/* contact */}
@@ -77,12 +76,12 @@ Contact Us</h2>
             {/* footer */}
      <div className='bg-black py-10'>
           <div className='grid grid-cols-1 gap-9 lg:grid-cols-2 lg:gap-0' >
-          <div className='flex flex-col gap-5 justify-center items-center'><p className='text-6xl text-center font-imperial text-[#fffff0]'>doodle's garden</p>
-          <ul className='flex justify-center items-center  text-[#fffff0] gap-16 list-disc  text-pretty  uppercase md:text-base'>
+          <div className='flex flex-col gap-5 justify-center items-center'><p className='text-6xl text-center font-imperial text-[#fffff0]'>doodle's Stay</p>
+          {/* <ul className='flex justify-center items-center  text-[#fffff0] gap-16 list-disc  text-pretty  uppercase md:text-base'>
             <li >drink</li>
             <li >drool</li>
             <li>dine</li>
-          </ul>
+          </ul> */}
           <ul className='flex text-2xl gap-5 text-[#fffff0]'>  
             <li><FaInstagram /></li>
             <li><FaFacebook /></li>
@@ -97,7 +96,7 @@ Contact Us</h2>
           </div>
           <div>
           <div className='h-[.1rem] my-8 bg-[#fffff0c7] w-full'></div>
-          <p className='text-sm font-kalam text-center text-[#fffff0c7]'>Copyright ©2025 created by SANTOSHI. All rights reserved.</p>
+          {/* <p className='text-sm font-kalam text-center text-[#fffff0c7]'>Copyright ©2025 created by SANTOSHI. All rights reserved.</p> */}
           </div>
         </div>
     </div>

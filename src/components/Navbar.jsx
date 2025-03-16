@@ -21,10 +21,10 @@ const Navbar = () => {
         </ul>
 </div> */}
         <div  className='flex items-start justify-between lg:items-center py-6 px-4 lg:py-0 md:px-20 '>
-        <ul className='lg:flex grid grid-cols-2 justify-between gap-5 lg:gap-14 capitalize text-lg font-outfit md:hidden'>
+        <ul className='md:flex md:pt-12 lg:pt-0 grid grid-cols-2 justify-between gap-5 lg:gap-14 capitalize text-lg font-outfit '>
         <Link to="/"><li className='text-black cursor-pointer hover-underline-animation   left'>home</li></Link>
-         <Link to="/Menu"><li className='text-black cursor-pointer hover-underline-animation left'>menu</li></Link> 
-          <Link to="/Venue"><li className='cursor-pointer hover-underline-animation left'>venue</li></Link> 
+         <Link to="/Menu"><li className='text-black cursor-pointer hover-underline-animation left'>room</li></Link> 
+          <Link to="/Venue"><li className='cursor-pointer hover-underline-animation left'>gallery</li></Link> 
           <Link to="/Contact"><li className='cursor-pointer hover-underline-animation left '>contact us</li></Link>
         <Link to="/About"><li className='cursor-pointer hover-underline-animation left'>about us</li></Link>
         </ul>

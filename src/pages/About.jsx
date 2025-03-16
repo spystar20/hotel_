@@ -13,23 +13,23 @@ const About = () => {
     <div>
         <div  className='grid grid-cols-1  lg:grid-cols-2 justify-center  bg-black gap-10 py-20  p-10 '>
             <div className='text-white text-center flex flex-col gap-4 '>
-                <h2 className='text-6xl underline underline-offset-8 capitalize py-6 font-imperial'>our chef</h2>
+                <h2 className='text-6xl underline underline-offset-8 capitalize py-6 font-imperial'>our manager</h2>
                 <p className='text-sm font-outfit '>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam sapiente praesentium eius laboriosam totam? Voluptatum quod in dolor praesentium quia optio Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, dicta. Voluptate nihil aliquid perspiciatis similique accusantium animi iure minus officiis tempore ullam dolor suscipit nobis odit minima, saepe, deleniti hic eveniet mollitia nam assumenda illo, debitis est. Minus ut deleniti ducimus porro dolor. Vel, eius! placeat fugit exercitationem tenetur labore soluta ullam qui, nobis ab. Veniam, dolore ipsa Lorem ipsum dolor, sit amet consectetur adipisicing elit. Alias facilis error accusamus excepturi culpa beatae suscipit, quis incidunt nesciunt numquam tempora saepe Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse, assumenda! Eius, similique! ad..</p>
             </div>
             <div  className='flex justify-center items-center'>
             <div data-aos="fade-in" className='bg-[#fffff0] p-3 rounded-md'>
-                <img  className='w-[20rem]' src="https://i.pinimg.com/474x/39/f5/87/39f587dcf9b1cd667039fd1d738452c3.jpg" alt="" />
+                <img  className='w-[20rem]' src="https://i.pinimg.com/736x/9b/2c/2b/9b2c2bde15e1976cc3f034df2f74007e.jpg" alt="" />
             </div>
             </div>
         </div>
         <div className='grid grid-cols-1 lg:grid-cols-2 justify-center  bg-[#fffff0] gap-10  py-20 px-14 '>
         <div className='flex justify-center items-center'>
             <div data-aos="fade-in" className='bg-black p-3 rounded-md'>
-                <img className='w-[20rem]' src="https://i.pinimg.com/474x/57/8b/4e/578b4e5f5c49cb7c91de06349721ba82.jpg" alt="" />
+                <img className='w-[20rem]' src="https://i.pinimg.com/474x/4d/f8/fe/4df8fecda02b7dfa8de21ea94a3eba34.jpg" alt="" />
             </div>
             </div>
             <div className='text-black text-center flex flex-col gap-4 '>
-                <h2 className='text-6xl underline underline-offset-8 capitalize py-6 font-imperial'>our restaurant</h2>
+                <h2 className='text-6xl underline underline-offset-8 capitalize py-6 font-imperial'>our hotel</h2>
                 <p className='text-sm font-outfit '>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam sapiente praesentium eius laboriosam totam? Voluptatum quod in dolor praesentium quia optio Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, dicta. Voluptate nihil aliquid perspiciatis similique accusantium animi iure minus officiis tempore ullam dolor suscipit nobis odit minima, saepe, deleniti hic eveniet mollitia nam assumenda illo, debitis est. Minus ut deleniti ducimus porro dolor. Vel, eius! placeat fugit exercitationem tenetur labore soluta ullam qui, nobis ab. Veniam, dolore ipsa Lorem ipsum dolor, sit amet consectetur adipisicing elit. Alias facilis error accusamus excepturi culpa beatae suscipit, quis incidunt nesciunt numquam tempora saepe Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse, assumenda! Eius, similique! ad..</p>
             </div>
            
@@ -37,12 +37,12 @@ const About = () => {
          {/* footer */}
      <div className='bg-black py-10'>
           <div className='grid grid-cols-1 gap-9 lg:grid-cols-2 lg:gap-0' >
-          <div className='flex flex-col gap-5 justify-center items-center'><p className='text-6xl text-center font-imperial text-[#fffff0]'>doodle's garden</p>
-          <ul className='flex justify-center items-center  text-[#fffff0] gap-16 list-disc  text-pretty  uppercase md:text-base'>
+          <div className='flex flex-col gap-5 justify-center items-center'><p className='text-6xl text-center font-imperial text-[#fffff0]'>doodle's Stay</p>
+          {/* <ul className='flex justify-center items-center  text-[#fffff0] gap-16 list-disc  text-pretty  uppercase md:text-base'>
             <li >drink</li>
             <li >drool</li>
             <li>dine</li>
-          </ul>
+          </ul> */}
           <ul className='flex text-2xl gap-5 text-[#fffff0]'>  
             <li><FaInstagram /></li>
             <li><FaFacebook /></li>
@@ -57,7 +57,7 @@ const About = () => {
           </div>
           <div>
           <div className='h-[.1rem] my-8 bg-[#fffff0c7] w-full'></div>
-          <p className='text-sm font-kalam text-center text-[#fffff0c7]'>Copyright ©2025 created by SANTOSHI. All rights reserved.</p>
+          {/* <p className='text-sm font-kalam text-center text-[#fffff0c7]'>Copyright ©2025 created by SANTOSHI. All rights reserved.</p> */}
           </div>
         </div>
     </div>
