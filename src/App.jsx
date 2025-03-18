@@ -10,7 +10,7 @@ import Booking from './pages/Booking'
 const App = () => {
   return (
     <BrowserRouter>
-    <div ><Navbar/>
+    <div><Navbar/>
     <Routes>
     <Route path='/' element={<Home/>}/>
       <Route path='/Menu' element={<Menu/>}/>

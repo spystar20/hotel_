@@ -3,7 +3,44 @@ import { FaInstagram, FaFacebook, FaSquareXTwitter } from 'react-icons/fa6'
 import { HiLocationMarker } from 'react-icons/hi'
 import { MdOutlinePhonePaused } from 'react-icons/md'
 import { Parallax } from 'react-parallax'
+import { Link } from 'react-router'
+import { ToastContainer } from 'react-toastify'
+import { useState } from 'react'
+import { handleError } from '../../notify'
+
 const Booking = () => {
+const [signupinfo, setsignupinfo] = useState({
+  name:'',
+  email:'',
+  password:'',
+  phone:''
+})
+const handleChange = (e) => {
+  const {name, value} = e.target
+console.log(name, value)
+const copysignupinfo = {...signupinfo}
+copysignupinfo[name] = value
+setsignupinfo(copysignupinfo)
+}
+const handleSignup = (e) => {
+  e.preventDefault()
+  const {name, email, password, phone} = signupinfo
+  if(!name || !email || !password || !phone){
+    return handleError('please fill all the fields')
+}
+try {
+  const url ='https://localhost:8080/auth/signup'
+  const response = fetch(url, {
+    method:'POST',
+    headers:{
+      'Content-Type':'application/json'
+    },
+    body:JSON.stringify(signupinfo)
+  })
+const result = response.json()
+console.log(result)
+} catch (error) {
+  handleError(error.message)}}
   return (
     <div className='bg-[#fffff0] text-black'>
               <Parallax className='w-[100%] h-[25vh] md:h-[46vh] lg:h-[100vh]' bgImageSizes='cover' bgImage='https://flavorofindia.com/wp-content/uploads/2023/03/Reservations.jpeg' strength={300}>
@@ -15,16 +52,23 @@ const Booking = () => {
                 <h2 className='text-3xl font-medium font-outfit capitalize'>make a reservation</h2>
 <p className='text-sm font-outfit '>Lorem ipsum dolor sit amuam, corporis reprehenderit animi voluptatem ea obcaecati? Provident, ipsum </p></div>
 <div className='border border-black  mx-auto  py-10  rounded-t-lg '>
-<div className='grid gap-6 lg:justify-center items-center'>
-  <div className='grid grid-flow-row lg:grid-flow-col gap-4 lg:justify-center md:px-4 items-center'>        
-<input type="text" className='border px-5 py-2 placeholder:font-thin border-black outline-none rounded-lg bg-transparent' placeholder='your name here...'/>
-<input type="text" className='border px-5 py-2 placeholder:font-thin border-black outline-none rounded-lg bg-transparent' placeholder='Example@yourmail.com'/>
-<input type="text" className='border px-5 py-2 placeholder:font-thin border-black outline-none rounded-lg bg-transparent' placeholder='password here'/>
-<input type="text" className='border px-5 py-2 placeholder:font-thin border-black outline-none rounded-lg bg-transparent' placeholder='phone number'/>
+<div className='grid px-4 gap-6 lg:justify-center items-center'>
+
+ {/* sign up */}
+  <form action="post" onSubmit={handleSignup}>  
+  <div className='grid  grid-flow-row lg:grid-flow-col gap-4 lg:justify-center md:px-4 items-center'>     
+<input value={signupinfo.name} onChange={handleChange} type="text" name='name' autoFocus className='border px-5 py-2 placeholder:font-thin border-black outline-none rounded-lg bg-transparent' placeholder='your name here...'/>
+<input value={signupinfo.email} onChange={handleChange} type="email" name='email' className='border px-5 py-2 placeholder:font-thin border-black outline-none rounded-lg bg-transparent' placeholder='Example@yourmail.com'/>
+<input value={signupinfo.password} onChange={handleChange} type="password" name='password' className='border px-5 py-2 placeholder:font-thin border-black outline-none rounded-lg bg-transparent' placeholder='password here'/>
+<input value={signupinfo.phone} onChange={handleChange} type="phone" name='phone' className='border px-5 py-2 placeholder:font-thin border-black outline-none rounded-lg bg-transparent' placeholder='phone number'/>
 </div> 
-<div className='grid md:px-4 lg:px-0'><button className=' border-black hover:bg-transparent hover:text-black border bg-black text-xl capitalize text-white px-3 py-3 rounded-xl ' >sign in</button></div> 
+<div className='grid md:px-4 lg:px-0 py-5'><button className=' border-black hover:bg-transparent hover:text-black border bg-black text-xl capitalize text-white px-3 py-3 rounded-xl ' >sign in</button></div>
+</form> 
 </div>
+<span className='font-thin text-center flex justify-center items-center capitalize'>already have an account ? <Link to="login" className=' px-1 font-outfit underline'>login</Link></span>
+<ToastContainer />
 </div>
+
  </div>
       {/* footer */}
      <div className='bg-black py-10'>
