@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { FaInstagram, FaFacebook, FaSquareXTwitter } from 'react-icons/fa6';
 import { HiLocationMarker } from 'react-icons/hi';
@@ -5,8 +6,41 @@ import { MdOutlinePhonePaused } from 'react-icons/md';
 import { Parallax } from 'react-parallax';
 
 const Booking = () => {
+const [signupinfo, setsignupinfo] = useState({
+  name:'',
+  email:'',
+  password:'',
+  phone:''
+})
+const handleChange = (e) => {
+  const {name, value} = e.target
+console.log(name, value)
+const copysignupinfo = {...signupinfo}
+copysignupinfo[name] = value
+setsignupinfo(copysignupinfo)
+}
+const handleSignup = (e) => {
+  e.preventDefault()
+  const {name, email, password, phone} = signupinfo
+  if(!name || !email || !password || !phone){
+    return handleError('please fill all the fields')
+}
+try {
+  const url ='https://localhost:8080/auth/signup'
+  const response = fetch(url, {
+    method:'POST',
+    headers:{
+      'Content-Type':'application/json'
+    },
+    body:JSON.stringify(signupinfo)
+  })
+const result = response.json()
+console.log(result)
+} catch (error) {
+  handleError(error.message)}}
   return (
     <div className='bg-[#fffff0] text-black'>
+
      
       <Parallax className='w-full h-[40vh] md:h-[60vh] lg:h-[90vh]' bgImage='https://flavorofindia.com/wp-content/uploads/2023/03/Reservations.jpeg' strength={300}>
         <div className='flex justify-center items-center h-full text-center'>
@@ -31,6 +65,7 @@ const Booking = () => {
               <input type='tel' className='border px-4 py-2 border-black outline-none rounded-md bg-transparent' placeholder='Phone Number' />
             </div>
             <button className='w-full border-black hover:bg-transparent hover:text-black border bg-black text-xl capitalize text-white px-5 py-3 rounded-lg transition-all'>Sign In</button>
+
           </div>
         </div>
       </div>

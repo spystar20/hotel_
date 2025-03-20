@@ -21,6 +21,7 @@ const App = () => {
 
   return (
     <BrowserRouter>
+
       <div>
         <Navbar />
         <Routes>
@@ -35,6 +36,7 @@ const App = () => {
           <Route path="/book-room/:roomId" element={<BookRoom />} />
         </Routes>
       </div>
+
     </BrowserRouter>
   );
 };
