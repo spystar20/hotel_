@@ -7,6 +7,11 @@ import { RiCupFill } from "react-icons/ri";
 import { PiForkKnifeFill } from "react-icons/pi";
 import { IoTvSharp } from "react-icons/io5";
 import { FaWifi } from "react-icons/fa";
+import { MdRoomService } from "react-icons/md";
+import { FaSwimmingPool } from "react-icons/fa";
+import { MdBalcony } from "react-icons/md";
+import { MdSpa } from "react-icons/md";
+import { MdOutlineLocalBar } from "react-icons/md";
 import { Link } from 'react-router-dom'; 
 
 const Menu = () => {
@@ -28,7 +33,7 @@ const Menu = () => {
     {
       id: 3,
       name: 'Honeymoon Special Room',
-      price: 69900,
+      price: 45900,
       image: 'https://i.pinimg.com/474x/a3/2e/69/a32e6987fd66f09dada5bd617b2d5e1d.jpg',
       amenities: [<RiCupFill />, <PiForkKnifeFill />, <IoTvSharp />]
     },
@@ -38,6 +43,41 @@ const Menu = () => {
       price: 80900,
       image: 'https://i.pinimg.com/474x/c1/83/70/c18370707df82322caf4fa6d2f5d1629.jpg',
       amenities: [<RiCupFill />, <PiForkKnifeFill />, <IoTvSharp />, <FaWifi />]
+    },
+    {
+      id: 5,
+      name: 'Executive Suite',
+      price: 95000,
+      image: 'https://plus.unsplash.com/premium_photo-1661903136240-a97367001a64?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTN8fGx1eHVyeSUyMHJvb218ZW58MHx8MHx8fDA%3D',
+      amenities: [<RiCupFill />, <PiForkKnifeFill />, <IoTvSharp />, <FaWifi />, <MdRoomService />]
+    },
+    {
+      id: 6,
+      name: 'Family Room',
+      price: 110000,
+      image: 'https://imgs.search.brave.com/IVHJRXIZ50KNPTFP5dThQf3Hfvl1sPsYgb-OxY1gqQ0/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9pLnBp/bmltZy5jb20vb3Jp/Z2luYWxzLzFlLzc4/Lzg0LzFlNzg4NDc4/MTVlMGQ1MDI0NjIw/MzlkYmFkOGE4ZmRj/LmpwZw',
+      amenities: [<RiCupFill />, <PiForkKnifeFill />, <IoTvSharp />, <FaWifi />, <MdRoomService />]
+    },
+    {
+      id: 7,
+      name: 'Pool Villa',
+      price: 150000,
+      image: 'https://media.istockphoto.com/id/1148629418/photo/home-or-house-building-exterior-and-interior-design-showing-tropical-pool-villa-with-green.webp?a=1&b=1&s=612x612&w=0&k=20&c=KcBNBzstoWYqrbDEefJTO0X11OhIus6vttdGpU4FLFU=',
+      amenities: [<RiCupFill />, <PiForkKnifeFill />, <IoTvSharp />, <FaWifi />, <MdRoomService />, <FaSwimmingPool />]
+    },
+    {
+      id: 8,
+      name: 'Ocean View Suite',
+      price: 130000,
+      image: 'https://imgs.search.brave.com/OSz5e-VvEFiLnd1E577hkleytRGZB4mK1GNM4BEqBeI/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5pc3RvY2twaG90/by5jb20vaWQvOTA3/NjE0NDUwL3Bob3Rv/L2x1eHVyeS1yZXNv/cnQtaG90ZWwtd2l0/aC1zd2ltbWluZy1w/b29sLWF0LXN1bnNl/dC5qcGc_cz02MTJ4/NjEyJnc9MCZrPTIw/JmM9ZVVpanp3LU1r/UHcwMEhBdzQ2NEkz/bXdhNGIxN3locmZ2/aDVIaUdaaUVxbz0',
+      amenities: [<RiCupFill />, <PiForkKnifeFill />, <IoTvSharp />, <FaWifi />, <MdBalcony />]
+    },
+    {
+      id: 9,
+      name: 'Luxury Penthouse',
+      price: 200000,
+      image: 'https://i.pinimg.com/236x/2a/87/29/2a87297fa657adebe0b8f38e1fb87826.jpg',
+      amenities: [<RiCupFill />, <PiForkKnifeFill />, <IoTvSharp />, <FaWifi />, <MdRoomService />, <MdSpa />, <MdOutlineLocalBar />]
     }
   ];
 
@@ -69,7 +109,14 @@ const Menu = () => {
                         <div key={index} className="relative group">
                           {icon}
                           <span className="absolute hidden group-hover:block -top-10 left-1/2 transform -translate-x-1/2 bg-gray-800 text-white text-xs p-2 rounded whitespace-nowrap">
-                            {index === 0 ? 'Breakfast' : index === 1 ? 'Restaurant' : index === 2 ? 'TV' : 'WiFi'}
+                            {index === 0 ? 'Breakfast' : 
+                             index === 1 ? 'Restaurant' : 
+                             index === 2 ? 'TV' : 
+                             index === 3 ? 'WiFi' : 
+                             index === 4 ? 'Room Service' : 
+                             index === 5 ? 'Swimming Pool' : 
+                             index === 6 ? 'Balcony' : 
+                             index === 7 ? 'Spa Access' : 'Mini Bar'}
                           </span>
                         </div>
                       ))}
@@ -96,7 +143,7 @@ const Menu = () => {
       <footer className="bg-gray-200 text-ivory py-12 px-6">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-6xl mx-auto">
           <div className="text-center space-y-6">
-            <h2 className="text-5xl font-serif">Doodle's Garden</h2>
+            <h2 className="text-5xl font-serif">Doodle's Stay</h2>
             <ul className="flex justify-center gap-8 uppercase text-sm">
               <li>Drink</li>
               <li>Drool</li>
