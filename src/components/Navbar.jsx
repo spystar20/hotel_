@@ -1,42 +1,43 @@
-import React from 'react'
-import logo from '../assets/logo.jpg'
-import { Link } from 'react-router'
+import React, { useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import { CiMenuKebab } from "react-icons/ci";
-import Aos from 'aos'
-import { useEffect } from 'react'
-import 'aos/dist/aos.css'
-const Navbar = () => {
- useEffect(()=>{
-    Aos.init({duration:1500})
-    },[])
-  return (
-    <div data-aos="fade-in" className='w-full capitalize nav'>
-         {/* <div className='bg-[#fffff0]  h-[7rem] absolute w-full rounded-full p-2 cursor-pointer '>
-<ul className=' lg:hidden justify-between  capitalize text-lg font-outfit '>
-        <Link to="/"><li className=' cursor-pointer hover-underline-animation   left'>home</li></Link>
-         <Link to="/Menu"><li className=' cursor-pointer hover-underline-animation left'>menu</li></Link> 
-          <Link to="/Venue"><li className='cursor-pointer hover-underline-animation left'>venue</li></Link> 
-          <Link to="/Contact"><li className='cursor-pointer hover-underline-animation left '>contact us</li></Link>
-        <Link to="/About"><li className='cursor-pointer hover-underline-animation left'>about us</li></Link>
-        </ul>
-</div> */}
-        <div  className='flex items-start justify-between lg:items-center py-6 px-4 lg:py-0 md:px-20 '>
-        <ul className='md:flex md:pt-12 lg:pt-0 grid grid-cols-2 justify-between gap-5 lg:gap-14 capitalize text-lg font-outfit '>
-        <Link to="/"><li className='text-black cursor-pointer hover-underline-animation   left'>home</li></Link>
-         <Link to="/Menu"><li className='text-black cursor-pointer hover-underline-animation left'>room</li></Link> 
-          <Link to="/Venue"><li className='cursor-pointer hover-underline-animation left'>gallery</li></Link> 
-          <Link to="/Contact"><li className='cursor-pointer hover-underline-animation left '>contact us</li></Link>
-        <Link to="/About"><li className='cursor-pointer hover-underline-animation left'>about us</li></Link>
-        </ul>
-        <div><img className='hidden md:w-[15vw] lg:w-[7vw] rounded-br-3xl rounded-tl-3xl' src={logo} alt="" /></div>
-        <div> <Link to="/Booking"><button className='button-1 rounded-2xl font-outfit text-base'>book a table</button></Link></div>
+import Aos from 'aos';
+import 'aos/dist/aos.css';
 
+const Navbar = () => {
+  useEffect(() => {
+    Aos.init({ duration: 1500 });
+  }, []);
+
+  return (
+    <div data-aos="fade-in" className="w-full capitalize bg-[#fffff0] shadow-md">
+      <div className="flex items-center justify-between py-6 px-4 lg:px-20">
         
+        {/* Navigation Links */}
+        <ul className="hidden md:flex gap-6 text-lg font-outfit">
+          <Link to="/"><li className="text-black cursor-pointer hover-underline-animation">Home</li></Link>
+          <Link to="/Menu"><li className="text-black cursor-pointer hover-underline-animation">Room</li></Link>
+          <Link to="/Venue"><li className="text-black cursor-pointer hover-underline-animation">Gallery</li></Link>
+          <Link to="/Contact"><li className="text-black cursor-pointer hover-underline-animation">Contact Us</li></Link>
+          <Link to="/About"><li className="text-black cursor-pointer hover-underline-animation">About Us</li></Link>
+        </ul>
+
+        {/* Booking Button */}
+        <div>
+          <Link to="/Booking">
+            <button className="bg-black text-white px-5 py-2 rounded-2xl font-outfit text-base hover:bg-gray-800">
+              Book a Room
+            </button>
+          </Link>
         </div>
 
-     
+        {/* Mobile Menu Icon */}
+        <div className="md:hidden">
+          <CiMenuKebab size={28} className="text-black cursor-pointer" />
+        </div>
+      </div>
     </div>
-  )
-}
+  );
+};
 
-export default Navbar
+export default Navbar;

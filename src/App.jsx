@@ -7,6 +7,7 @@ import Venu from './pages/Venu'
 import Contact from './pages/Contact'
 import About from './pages/About'
 import Booking from './pages/Booking'
+import BookRoom from './pages/BookRoom'
 const App = () => {
   return (
     <BrowserRouter>
@@ -17,6 +18,7 @@ const App = () => {
       <Route path='/Venue' element={<Venu/>}/>
       <Route path='/Contact' element={<Contact/>}/>
       <Route path='/About' element={<About/>}/>
+      <Route path="/book-room/:roomId" element={<BookRoom />} />
       <Route path='/Booking' element={<Booking/>}/>
     </Routes>
     </div>
