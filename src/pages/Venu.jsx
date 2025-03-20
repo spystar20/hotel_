@@ -6,7 +6,7 @@ import { Parallax } from 'react-parallax'
 import { useEffect } from 'react'
 import 'aos/dist/aos.css'
 import Aos from 'aos'
-const Venu = () => {
+const Venue = () => {
       useEffect(()=>{
         Aos.init({duration:2000})
         },[])
@@ -106,4 +106,4 @@ const Venu = () => {
   )
 }
 
-export default Venu
+export default Venue

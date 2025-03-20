@@ -1,42 +1,85 @@
-import React from 'react'
-import logo from '../assets/logo.jpg'
-import { Link } from 'react-router'
+import React, { useState } from 'react';
+import logo from '../assets/logo.jpg';
+import { Link } from 'react-router-dom';
 import { CiMenuKebab } from "react-icons/ci";
-import Aos from 'aos'
-import { useEffect } from 'react'
-import 'aos/dist/aos.css'
-const Navbar = () => {
- useEffect(()=>{
-    Aos.init({duration:1500})
-    },[])
-  return (
-    <div data-aos="fade-in" className='w-full capitalize nav'>
-         {/* <div className='bg-[#fffff0]  h-[7rem] absolute w-full rounded-full p-2 cursor-pointer '>
-<ul className=' lg:hidden justify-between  capitalize text-lg font-outfit '>
-        <Link to="/"><li className=' cursor-pointer hover-underline-animation   left'>home</li></Link>
-         <Link to="/Menu"><li className=' cursor-pointer hover-underline-animation left'>menu</li></Link> 
-          <Link to="/Venue"><li className='cursor-pointer hover-underline-animation left'>venue</li></Link> 
-          <Link to="/Contact"><li className='cursor-pointer hover-underline-animation left '>contact us</li></Link>
-        <Link to="/About"><li className='cursor-pointer hover-underline-animation left'>about us</li></Link>
-        </ul>
-</div> */}
-        <div  className='flex items-start justify-between lg:items-center py-6 px-4 lg:py-0 md:px-20 '>
-        <ul className='md:flex md:pt-12 lg:pt-0 grid grid-cols-2 justify-between gap-5 lg:gap-14 capitalize text-lg font-outfit '>
-        <Link to="/"><li className='text-black cursor-pointer hover-underline-animation   left'>home</li></Link>
-         <Link to="/Menu"><li className='text-black cursor-pointer hover-underline-animation left'>room</li></Link> 
-          <Link to="/Venue"><li className='cursor-pointer hover-underline-animation left'>gallery</li></Link> 
-          <Link to="/Contact"><li className='cursor-pointer hover-underline-animation left '>contact us</li></Link>
-        <Link to="/About"><li className='cursor-pointer hover-underline-animation left'>about us</li></Link>
-        </ul>
-        <div><img className='hidden md:w-[15vw] lg:w-[7vw] rounded-br-3xl rounded-tl-3xl' src={logo} alt="" /></div>
-        <div> <Link to="/Booking"><button className='button-1 rounded-2xl font-outfit text-base'>book a table</button></Link></div>
+import { IoClose } from "react-icons/io5";
+import 'aos/dist/aos.css';
 
-        
+const Navbar = () => {
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+
+  const navItems = [
+    { to: '/', label: 'Home' },
+    { to: '/menu', label: 'Rooms' },
+    { to: '/venue', label: 'Gallery' },
+    { to: '/contact', label: 'Contact Us' },
+    { to: '/about', label: 'About Us' },
+  ];
+
+  return (
+    <nav className="w-full bg-ivory shadow-md sticky top-0 z-50" data-aos="fade-in">
+      <div className="flex items-center justify-between py-4 px-4 sm:px-6 md:px-12 lg:px-20">
+      
+        <div className="flex-shrink-0">
+          <img
+            className="w-16 sm:w-20 md:w-20 lg:w-24 rounded-br-3xl rounded-tl-3xl object-cover"
+            src={logo}
+            alt="Doodle's Stay Logo"
+          />
         </div>
 
-     
-    </div>
-  )
-}
+    
+        <ul className="hidden lg:flex items-center gap-8 capitalize text-lg font-medium text-gray-800">
+          {navItems.map((item, index) => (
+            <li key={index}>
+              <Link
+                to={item.to}
+                className="relative pb-1 hover:text-gray-600 transition-colors duration-300 after:content-[''] after:absolute after:w-0 after:h-[2px] after:bg-gray-800 after:bottom-0 after:left-0 after:transition-all after:duration-300 hover:after:w-full"
+              >
+                {item.label}
+              </Link>
+            </li>
+          ))}
+        </ul>
 
-export default Navbar
+      
+        <div className="flex items-center gap-3 sm:gap-4">
+          <Link to="/menu" className="flex-shrink-0">
+            <button className="bg-gray-800 text-white text-ivory px-3 py-1.5 sm:px-4 sm:py-2 rounded-full font-medium text-xs sm:text-sm uppercase hover:bg-gray-700 transition-colors">
+              Book a Room
+            </button>
+          </Link>
+          <button
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            className="lg:hidden text-2xl sm:text-3xl text-gray-800 focus:outline-none"
+            aria-label="Toggle mobile menu"
+          >
+            {isMobileMenuOpen ? <IoClose /> : <CiMenuKebab />}
+          </button>
+        </div>
+      </div>
+
+    
+      {isMobileMenuOpen && (
+        <div className="lg:hidden bg-gray-50 bg-ivory px-4 sm:px-6 py-6 shadow-md absolute w-full top-full left-0 z-40">
+          <ul className="flex flex-col gap-6 capitalize text-lg font-medium text-gray-800">
+            {navItems.map((item, index) => (
+              <li key={index}>
+                <Link
+                  to={item.to}
+                  onClick={() => setIsMobileMenuOpen(false)}
+                  className="block py-2 px-4 hover:bg-gray-100 rounded-md transition-colors duration-200"
+                >
+                  {item.label}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
+    </nav>
+  );
+};
+
+export default Navbar;

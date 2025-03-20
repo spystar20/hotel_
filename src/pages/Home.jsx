@@ -106,37 +106,37 @@ const Home = () => {
               <div className='flex flex-col gap-2'><div className='flex justify-center items-center'> <GiCoffeeCup className='text-4xl text-center' /></div>
                 <h1 className='text-xl font-antonio'>breakfast</h1>
               </div>
-              <p className='text-sm pt-4 italic font-outfit text-center px-6 '> labore  nemo? Illum, voluptatibus. ipsum, dolor sit amet consectetur adipisicing elit.</p>
+              <p className='text-sm pt-4 italic font-outfit text-center px-6 '> Enjoy a delicious start to your day with our complimentary breakfast.</p>
             </li>
             <li className=' flex  justify-center  items-center flex-col capitalize'>
               <div className='flex flex-col gap-2'><div className='flex justify-center items-center'> <GiFlowerPot className='text-4xl text-center' /></div>
                 <h1 className='text-xl font-antonio'>garden</h1>
               </div>
-              <p className='text-sm pt-4 italic font-outfit text-center px-6 '> labore  nemo? Illum, voluptatibus. ipsum, dolor sit amet consectetur adipisicing elit.</p>
+              <p className='text-sm pt-4 italic font-outfit text-center px-6 '>Relax in our beautifully landscaped outdoor garden area.</p>
             </li>
             <li className=' flex  justify-center  items-center flex-col capitalize'>
               <div className='flex flex-col gap-2'><div className='flex justify-center items-center'> <PiSwimmingPool  className='text-4xl text-center' /></div>
                 <h1 className='text-xl font-antonio'>pool</h1>
               </div>
-              <p className='text-sm pt-4 italic font-outfit text-center px-6 '> labore  nemo? Illum, voluptatibus. ipsum, dolor sit amet consectetur adipisicing elit.</p>
+              <p className='text-sm pt-4 italic font-outfit text-center px-6 '>Take a refreshing dip in our pristine swimming pool.</p>
             </li>
             <li className=' flex  justify-center  items-center flex-col capitalize'>
               <div className='flex flex-col gap-2'><div className='flex justify-center items-center'> <CiWifiOn className='text-4xl text-center' /></div>
                 <h1 className='text-xl font-antonio'>free wifi</h1>
               </div>
-              <p className='text-sm pt-4 italic font-outfit text-center px-6 '> labore  nemo? Illum, voluptatibus. ipsum, dolor sit amet consectetur adipisicing elit.</p>
+              <p className='text-sm pt-4 italic font-outfit text-center px-6 '> Stay connected with high-speed internet throughout your stay.</p>
             </li>
             <li className=' flex  justify-center  items-center flex-col capitalize'>
               <div className='flex flex-col gap-2'><div className='flex justify-center items-center'> <PiTowelFill  className='text-4xl text-center' /></div>
                 <h1 className='text-xl font-antonio'>Daily Housekeeping</h1>
               </div>
-              <p className='text-sm pt-4 italic font-outfit text-center px-6 '> labore  nemo? Illum, voluptatibus. ipsum, dolor sit amet consectetur adipisicing elit.</p>
+              <p className='text-sm pt-4 italic font-outfit text-center px-6 '>Experience a clean and tidy room with our daily housekeeping service.</p>
             </li>
             <li className=' flex  justify-center  items-center flex-col capitalize'>
               <div className='flex flex-col gap-2'><div className='flex justify-center items-center'> <MdOutlineDinnerDining  className='text-4xl text-center' /></div>
                 <h1 className='text-xl font-antonio'>In-Room Dining Service</h1>
               </div>
-              <p className='text-sm pt-4 italic font-outfit text-center px-6 '> labore  nemo? Illum, voluptatibus. ipsum, dolor sit amet consectetur adipisicing elit.</p>
+              <p className='text-sm pt-4 italic font-outfit text-center px-6 '> Savor delicious meals delivered straight to your room.</p>
             </li>
           </ul>
         </div>
@@ -169,7 +169,7 @@ const Home = () => {
           <div className='grid grid-cols-1 md:grid-cols-2 py-5 gap-8 lg:gap-14 items-center justify-center'>
             <div data-aos="fade-in" className='text-center flex flex-col gap-6 '>
               <h2 className='text-2xl font-medium font-imperial md:text-4xl'>Truly Relaxing and Authentic Environment</h2>
-              <p className='text-sm  font-outfit md:text-xl'>Welcome to Doodle’s Garden, where every meal is a family affair! Situated in the heart of our community, Doodle’s Garden is more than just a diner – it’s a gathering place for friends, families along with their pets to come together and create lasting memories over delicious food and warm hospitality.</p>
+              <p className='text-sm  font-outfit md:text-xl'>Welcome to Doodle’s Stay, where every meal is a family affair! Situated in the heart of our community, Doodle’s Garden is more than just a diner – it’s a gathering place for friends, families along with their pets to come together and create lasting memories over delicious food and warm hospitality.</p>
               <Link to="/Booking"> <div><button data-aos="zoom-out" className=' border-black border-2 text-xl uppercase hover:bg-black hover:text-[#FFFFF0] font-antonio text-black px-3 py-2 rounded-xl'>reserve a room</button></div></Link>
             </div>
             <div className='flex justify-center items-center'> <img data-aos="fade-in" className='rounded-t-full w-[19rem]   outline-black outline-2 outline  outline-offset-8' src="https://i.pinimg.com/474x/b0/db/97/b0db97aa653821549856f7444b9d8c65.jpg" alt="" /></div>
